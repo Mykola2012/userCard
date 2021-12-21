@@ -1,7 +1,8 @@
 :root {
   --card-width: 350px;
+  --font-weight: 600;
   font-family: sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
   text-align: center;
   color: #9c9ca8;
@@ -28,14 +29,16 @@ body {
   flex-direction: column;
   max-width: var(--card-width);
   margin: 80px 0;
-  background-color: white;
   border-radius: 20px;
   box-shadow: 0px 0px 1px;
-  padding: 20px 0;
+  background-color: rgba(211, 208, 208, 0.11);
 }
 
 .cardHeader {
-  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .cardPhoto {
@@ -65,7 +68,7 @@ body {
   font-size: 1.5rem;
   display: block;
   position: relative;
-  top: -21px;
+  top: -23px;
 }
 
 .fa-star:hover {
@@ -82,13 +85,12 @@ body {
 .cost {
   margin-top: 10px;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: var(--font-weight);
 }
 
 .cardInfo {
   margin-top: calc(0.05 * var(--card-width));
   padding: 20px 40px 0;
-  background-color: rgba(182, 182, 182, 0.11);
 }
 
 .cardInfo > h3 {
@@ -98,7 +100,7 @@ body {
 }
 
 .location {
-  font-weight: 600;
+  font-weight: var(--font-weight);
   margin-top: calc(0.03 * var(--card-width));
 }
 
@@ -108,15 +110,52 @@ body {
 }
 
 .cardLink {
-  background-color: rgba(182, 182, 182, 0.11);
   padding-top: calc(0.06 * var(--card-width));
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .cardLink > a {
+  min-width: calc(0.6 * var(--card-width));
+  min-height: calc(0.11 * var(--card-width));
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.3rem;
+  font-weight: var(--font-weight);
+  font-size: 1.2rem;
   text-transform: uppercase;
+  padding-top: calc(0.03 * var(--card-width));
+  border-radius: 10px;
+}
+
+.cardLink > a + a {
+  margin-top: calc(0.03 * var(--card-width));
+}
+
+.whiteLink {
+  color: #039be6;
+  background-color: #fff;
+  border: 2px solid #039be6;
+}
+
+.blueLink {
+  color: #fff;
+  background-color: #039be6;
+  border: 2px solid #fff;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(0.05 * var(--card-width));
+}
+
+.fa-circle {
+  color: #8cc348;
+  font-size: 0.8rem;
+}
+
+.cardFooter > p {
+  font-size: 1.13rem;
+  padding-left: calc(0.015 * var(--card-width));
 }
