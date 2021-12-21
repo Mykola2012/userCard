@@ -1,7 +1,8 @@
 :root {
-  --card-width: 250px;
+  --card-width: 350px;
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 300;
   text-align: center;
   color: #9c9ca8;
 }
@@ -12,6 +13,7 @@
 
 body {
   margin: 0;
+  background-color: #f5f6f8;
 }
 
 .cardContainer {
@@ -24,9 +26,12 @@ body {
 .userCard {
   display: flex;
   flex-direction: column;
-
   max-width: var(--card-width);
   margin: 80px 0;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 1px;
+  padding: 20px 0;
 }
 
 .cardHeader {
@@ -42,24 +47,76 @@ body {
 
 .circleStar {
   position: relative;
-  top: -13px;
-}
-
-.fa-star {
-  color: #e6e4e9;
-  display: block;
-  position: relative;
-  z-index: 1;
-  top: -16px;
+  top: calc(-0.05 * var(--card-width));
 }
 
 .circleStar::before {
   content: "";
   display: block;
-  z-index: -1;
   margin: auto;
   width: calc(0.08 * var(--card-width));
   height: calc(0.08 * var(--card-width));
   background-color: white;
   border-radius: 50%;
+}
+
+.fa-star {
+  color: #e6e4e9;
+  font-size: 1.5rem;
+  display: block;
+  position: relative;
+  top: -21px;
+}
+
+.fa-star:hover {
+  color: #f6c308;
+}
+
+.cardHeader > h2 {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: calc(-0.05 * var(--card-width));
+}
+
+.cost {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cardInfo {
+  margin-top: calc(0.05 * var(--card-width));
+  padding: 20px 40px 0;
+  background-color: rgba(182, 182, 182, 0.11);
+}
+
+.cardInfo > h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: black;
+}
+
+.location {
+  font-weight: 600;
+  margin-top: calc(0.03 * var(--card-width));
+}
+
+.cardText {
+  margin-top: calc(0.04 * var(--card-width));
+  line-height: 1.8rem;
+}
+
+.cardLink {
+  background-color: rgba(182, 182, 182, 0.11);
+  padding-top: calc(0.06 * var(--card-width));
+  display: flex;
+  flex-direction: column;
+}
+
+.cardLink > a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
