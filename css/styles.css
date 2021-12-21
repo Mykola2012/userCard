@@ -40,17 +40,26 @@ body {
   object-fit: cover;
 }
 
-.iconStar {
-  margin: 0 auto;
+.circleStar {
+  position: relative;
+  top: -13px;
 }
 
 .fa-star {
   color: #e6e4e9;
   display: block;
   position: relative;
-  top: -10px;
-  width: 0.07rem;
-  height: 0.07rem;
+  z-index: 1;
+  top: -16px;
+}
+
+.circleStar::before {
+  content: "";
+  display: block;
+  z-index: -1;
+  margin: auto;
+  width: calc(0.08 * var(--card-width));
+  height: calc(0.08 * var(--card-width));
   background-color: white;
   border-radius: 50%;
 }
