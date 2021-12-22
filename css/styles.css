@@ -1,8 +1,9 @@
 :root {
   --card-width: 350px;
+  --card-min-width: 230px;
   --font-weight: 600;
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: calc(0.035 * var(--card-width));
   font-weight: 300;
   text-align: center;
   color: #9c9ca8;
@@ -20,6 +21,7 @@ body {
 .cardContainer {
   max-width: 1200px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 0 auto;
 }
@@ -28,7 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   max-width: var(--card-width);
-  margin: 80px 0;
+  min-width: var(--card-min-width);
+  margin: 60px 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 1px;
   background-color: rgba(211, 208, 208, 0.11);
