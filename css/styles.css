@@ -2,11 +2,12 @@
   --card-width: 350px;
   --card-min-width: 230px;
   --font-weight: 600;
+  --main-color: #9c9ca8;
   font-family: sans-serif;
   font-size: calc(0.035 * var(--card-width));
   font-weight: 300;
   text-align: center;
-  color: #9c9ca8;
+  color: var(--main-color);
 }
 
 * {
@@ -107,11 +108,13 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   color: black;
+  margin-bottom: calc(0.04 * var(--card-width));
 }
 
 .location {
+  text-decoration: none;
+  color: var(--main-color);
   font-weight: var(--font-weight);
-  margin-top: calc(0.03 * var(--card-width));
 }
 
 .cardText {
