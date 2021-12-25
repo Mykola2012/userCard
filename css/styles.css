@@ -100,6 +100,13 @@ body {
   font-weight: var(--font-weight);
 }
 
+.infoBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .cardInfo {
   margin-top: calc(0.05 * var(--card-width));
   padding: 20px 40px 0;
